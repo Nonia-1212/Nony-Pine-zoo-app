@@ -1,0 +1,234 @@
+/***Styling the entire page of the app***/
+body{
+ padding: 0;
+ margin: 0;
+ font-family: Arial, Helvetica, sans-serif;   
+}
+
+/***************** HEADER ******************/
+
+/*******wood image header- we  included a # on header as it is the id of the name from html that we want to style**/
+#header{
+    position: fixed;/** position of the id selected**/
+    top: 0px;/** position of the id selected**/
+    left: 0px;
+    z-index: 500;/** the header will always be on the top of the screen ontop of everything such that when you scroll, it will be fixed**/
+    width: 100%;/** it will take up the full width of the upper screen**/
+    height: 80px; 
+    background-image: url(images/wood-bg.png); /** background design of the header**/
+    background-repeat: repeat-x;/** the background image style will be repeated on all pages horizontally**/
+}
+
+/** the Pine zoo image styling - header**/
+#header img{
+    display: block; /** we will be able to adjust the width and height of the pine zoo image**/
+    margin: auto; /**usually centers the image horizontally**/
+    height: 70%; /** the pine zoo logo image will be occupying 70% of the wood image top part**/
+    padding-top: 15px;/** to leave some space between the background image of wood and the pinezoo logo **/
+}
+
+/***************** TOP-TABS  ***************/
+
+/** to move the tabs bar below the pine zoo img header**/
+#tabs-top{
+    position: fixed;
+    top: 80px; /** the header has top of 0px and height of 80px therefore we can start our tabs after the header**/
+    left: 0;
+    z-index: 500;/** the tabs top will always be on the top of the screen ontop of everything such that when you scroll, it will be fixed**/
+    width: 100%;/** it will take up the full width of the upper screen after the heading wood image**/
+    height: 40px; /** height of the tab bar**/
+    background-color: darkgreen;
+}
+
+/**styling of the hyper links/ texts (about, places, map) on the tabs top bar**/
+#tabs-top a{
+    float: left; /** float the links ontop of the top tab bar**/
+    display: block;/** we will be able to adjust the width and height of the hyperlinks (about, map)**/
+    width: 33%; /** which means it will space up 1/3 of the top tabs on the entire  width of the screen as the links are only 3**/
+    height: 35px;  /** height of the hyperlinks just 5px smaller to accomodate into the green tab bar**/
+    font-weight: 700;
+    color: white; /** color of the text/ hyperlinks**/
+    text-align: center; /** the texts will align at the center of the whole page**/
+    text-decoration: none;/** this will remove the underligns on the texts or hyperlinks**/
+    padding-top: 12px; /** the texts will align at the center inside the top tab bar**/
+}
+
+/***************** MAIN-HOME ***************/
+
+#main-home{
+    margin-top: 120px; /**it will adjust the picture of the map and leave a space 120px from the top of the screen 
+    (header 80px and 40px tabs top heights = 120px) 
+    (adjusting the map picture hidden under the header) up to the main home page section**/
+}
+
+/***************** BOTTOM-TABS ***************/
+
+#tabs-bottom{
+    position: fixed;
+    bottom: 0; /** it will be stuck at the bottom section of the screen**/
+    left: 0;
+    z-index: 500; /** when scrolling the tabs bar at the bottom will remain fixed as if the main home is moving inside the bottom bar**/
+    width: 100%; /* width of the tab bar**/
+    height: 40px; /** height of the tab bar**/
+    background-color: darkgreen;
+}
+
+#tabs-bottom a{
+    float: left; /** float the links ontop of the bottom tab bar**/
+    display: block; /** we will be able to adjust the width and height of the hyperlinks (about, map)**/
+    width: 50%; /** which means it will space up 1/3 of the top tabs on the entire width of the screen as the links are only 2**/
+    height: 35px;
+    font-weight: 700; /* no unit, it is just a number*/
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 12px;
+}
+
+/***************** ALL PAGES EXCEPT THE MAP PAGE - MAIN ***************/
+
+/* Main container styling of the blurry map image */
+#main { 
+    margin-top: 120px; /* Pushes the element 120px from the top */
+    background: url(images/map-blur.png); /* Adds a background image */
+    width: 100%; /* Full width of the container */
+    min-height: 100vh; /* the image will cover At least full screen */
+    background-repeat: repeat-y; /* Repeat the background image vertically */
+    background-size: cover; /* Fills the entire container */
+}
+
+#content{
+    padding-top: 1px; /* spacing  of information in the info box */
+    padding-bottom: 50px; /* spacing to move information in the info box*/
+}
+
+/***************** INFO- BOX ***************/
+
+/* any class category will use a full stop (.) and not a #*/
+a.info-box{ /*a.info- box mean any hyper links with the class name info box will have these styles below*/
+    text-decoration: none; /* no underligns*/
+    background: rgba(255,255,255, .8); /* rgba is a mixture of colors( the first 3 numbers will be white in color) and  the .8 means the box will be 20% transparent*/
+    width: 90%; /* there will be some spaces on the left and right of the box on the width*/
+    height: 90px;
+    display: block; /*allows to adjust the inside texts` width and height*/
+    margin: auto; /* the box will be centralised to the screen*/
+    margin-top: 12px; /* the gaps between our info boxes of different animals above and below*/
+    padding: 1px; /* when u dont state that the padding top or bottom - it will be done all around the box*/
+    /* padding is compiling all information and styles into the info box*/
+}
+
+/*styling the animals image thumpnail that appears inside the info box class*/
+.info-box img{
+    height: 70px;
+    margin: 10px; /* turning the image into all round thumpnail size*/
+    float: left; /* the image thumpnail will be placed on the left of the info box*/
+}
+
+/* this is the arrow image that has a class of img.right*/
+.info-box img.right{
+    float: right; /*position of the arrow image*/
+    margin-top: 25px;
+    height: 40px;
+}
+
+/* styling the heading and paragraphs eg Elephant*/
+.info-box h3{
+    padding: 0;
+    margin-bottom: 0;
+    width: 90%;
+    color: #572800;
+}
+
+.info-box p{
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    color: #131313;
+}
+
+/***************** INFO- BOX FULL - ELEPHANT ***************/
+
+#info-box-full{
+    background: rgba(255,255,255, .8); /* the box to be designed will have a blury background color using the rgba .8 (you can adjust the bluriness if the box using this option*/
+    width: 90%; /* there will be some spaces on the left and right of the box on the width*/
+    display: block; /* allows to adjust the inside texts` width and height*/
+    margin: auto; /* the box will be centralised to the screen*/
+    margin-top: 12px; /* the gaps between our info box above and below*/
+    padding: 10px; /* when u dont state that the padding top or bottom - it will be done all around the box*/
+    /* padding is compiling all information and styles into the info box*/
+}
+
+#info-box-full img{
+    width: 100%; /* the elephant image will fit into the box at 100% width horizontally*/
+}
+
+#info-box-full h3{
+    text-align: center; /* all texts will be on the center of the box*/
+}
+
+
+/***************** WEATHER ***************/
+
+img.info-box-weather-icon{
+    height: 30px;
+    width: 30px !important; /**important means -prioritise the width ovverriding the  width styles on the top which could affect this line**/
+    margin: 10px;
+    float: left;
+}
+
+img.info-box-weather{
+    height: 30px;
+    width: 30px !important;
+    margin: 10px;
+    float: left;
+}
+
+h1{
+    text-align: center;
+    text-decoration: darkgreen;
+}
+
+h1.info-box-weather-icon{
+    font-size: 65px;
+    font-weight: 200;
+    padding: 0;
+    margin: 0;
+}
+
+table{
+    width: 100%;
+}
+
+td{
+    border-top: 1px solid #131313;
+}
+
+/***************** FEEDBACK ***************/
+
+input{
+    width: 100%;
+    height: 25px;
+    margin: 12px 0; /** (gives spaces to the input boxes. this is a shorthand method of assigning margins to elements, 12px refer to top and bottom and the 0 refers to left and right**/
+    border: 1px solid #929292;
+}
+
+textarea{
+    width: 100%;
+    height: 65px;
+    margin: 12px 0; /** gives spaces to the input boxes.**/
+    border: 1px solid #929292;
+}
+
+/* submit button styling - feedback*/
+.button{
+    display: block;
+    width: 100%;
+    background-color: forestgreen;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 12px 0;
+    padding: 8px 0;
+}
